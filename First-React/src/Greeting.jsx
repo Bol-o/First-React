@@ -3,9 +3,14 @@
 // import './index.css'
 
 
- function Greeting() {
-    return <h1>&quot;I swear by my pretty floral bonnet, I will end you.&quot;</h1>;
+  export function Greeting(props) {
+    return <h1>{props.animals}</h1>;
   }
   
+  export function Byeing(){
+    const animalss = ["Lion", "Cow", "Snake", "Lizard"];
+    const animals = animalss[1]
+    return <Greeting animals={animals}/>
+  }
 
-  export default Greeting
+  
