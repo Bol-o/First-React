@@ -13,4 +13,5 @@
     return <Greeting animals={animals}/>
   }
 
-  
+  //props is there even if you don't 'declare' a property like in here '<Greeting animals={animals}/>,
+  // it just doesnt have any properties, empty 'object', I think...
