@@ -34,7 +34,7 @@ export function PackingList() {
   );
 }
 
-  export function Greeting(props) {
+  export function Greeting(props) { 
     return <h1>{props.animals}</h1>;
   }
   
