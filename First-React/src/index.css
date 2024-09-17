@@ -57,7 +57,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: {background};
   }
   a:hover {
     color: #747bff;
@@ -65,4 +65,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.avatar{
+  border: 5px solid red;
+  border-radius: 10%;
+}
+.avatar2{
+  border: 3px solid black;
+  border-radius: 10%;
+  margin: 15px;
 }
