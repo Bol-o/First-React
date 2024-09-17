@@ -20,7 +20,6 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
     colorArr.push(color);
 
     alert('whole thing:  ' + colorArr)
-    alert('whole thing:  ' + colorArr)
     alert(colorArr[colorArr.length - 1])
     alert('arr length is:  ' + colorArr.length)
 
