@@ -3,9 +3,9 @@ import "./App2.css";
 
 const COLORS = ["pink", "green", "blue", "yellow", "purple"];
 
- function App() {
+ export function App() {
   
-  const [colorArr, setArr] = useState([])
+  const [colorArr] = useState([])
 
   const[count, setCount] = useState(0);
   
@@ -19,16 +19,18 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
     
     colorArr.push(color);
 
-    alert('whole thing:  ' + colorArr)
-    alert('whole thing:  ' + colorArr)
-    alert(colorArr[colorArr.length - 1])
-    alert('arr length is:  ' + colorArr.length)
+    // alert('whole thing:  ' + colorArr)
+    // alert('whole thing:  ' + colorArr)
+    // alert(colorArr[colorArr.length - 1])
+    // alert('arr length is:  ' + colorArr.length)
 
     
     
-    
-      if (colorArr.length > 1 && color == colorArr[colorArr.length - 2]){
-        alert('conter not going up case same color' + colorArr[colorArr.length - 1])
+    if (colorArr.length == 1 && colorArr[0] !== COLORS[0]){
+        count++
+
+      }else if (colorArr.length > 1 && color == colorArr[colorArr.length - 2]){
+        alert('counter not going up cause same color: ' + colorArr[colorArr.length - 1])
       } else if (colorArr.length > 1 && color !== colorArr[colorArr.length - 2]){
         count++
       }
@@ -79,5 +81,16 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
   );
 }
 
+export function CustomInput() {
+  const [value, setValue] = useState("");
 
-export default App
+  return (
+    <input
+      className="CustomInput"
+      type="text"
+      value={value}
+      onChange={(event) => setValue(event.target.value)}
+    />
+  );
+}
+

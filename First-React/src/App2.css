@@ -54,7 +54,7 @@
     textAlign: 'center' */
   }  
 
-  .CountboxLabel{ 
+  .CountboxLabel, .CustomInput { 
     display: flex;
     align-items: center;
     justify-content: center;
