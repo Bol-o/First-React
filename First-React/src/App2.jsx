@@ -13,13 +13,12 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
   
   const [colorArr] = useState([])
 
-  const[count] = useState([]);
-  // alert("b4 onclik: " + count)
+  const[count, setCount] = useState(0);
   
   const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
 
-  const onButtonClick = (color) => () => {
-    alert("AFTA onclik: " + count)
+  const onButtonClick = (color, count) => () => {
+   
     //alert(colorArr)
     
     setBackgroundColor(color);
@@ -27,8 +26,7 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
     colorArr.push(color);
   
 
-    // alert('count before ifs:  ' + count)
-    // alert('colorArr before ifs:  ' + colorArr)
+    // alert('whole thing:  ' + colorArr)
     // alert('whole thing:  ' + colorArr)
     // alert(colorArr[colorArr.length - 1])
     // alert('arr length is:  ' + colorArr.length)
@@ -37,28 +35,22 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
     
     if (colorArr.length == 1 && colorArr[0] == COLORS[0]){
       alert('counter not going up cause same color: ' + colorArr[colorArr.length - 1])
-    } else if (colorArr.length == 1 && colorArr[0] !== COLORS[0]){
-      // alert('it is not he pink and count b4 ++  is: ' + count)
-        count.push(1)
-        // count = count.length
-        // alert('it is not he pink and count is: '+ count)
+    } else if (colorArr.length == 1 && colorArr[0] == COLORS[0]){
+        count++
 
       }else if (colorArr.length > 1 && color == colorArr[colorArr.length - 2]){
         alert('counter not going up cause same color: ' + colorArr[colorArr.length - 1])
         
       } else if (colorArr.length > 1 && color !== colorArr[colorArr.length - 2]){
-        count.push(1)
-        // count = count.length
-        // alert('it is not he pink and count is: ' + count)
+        count++
       }
     
 
-      // alert('count After ifs:  ' + count)
-      // alert('clourArr After ifs:  ' + colorArr)
+    
 
     
     
-    count++
+    setCount(count)
 
     setPerson((person) => ({ ...person, age: person.age + 1 }));
     
@@ -85,7 +77,7 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
         <button
           type="button"
           key={color}
-          onClick={onButtonClick(color)}
+          onClick={onButtonClick(color, count)}
          
           className={backgroundColor === color ? "selected" : ""}
         >
@@ -110,8 +102,7 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
     </div>
     <label className="CountboxLabel"  for="CountBox">Count:</label>
     <div className="CountBox">
-      {count.length
-      }
+      {count}
       
     </div>
     <div className="CustomInput"><CustomInput /></div>
