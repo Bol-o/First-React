@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 60vh;
+    transition: all 0.1s ease-in;
+  }
+  
+  .App button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .App button:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+  }
+  
+  .App button.selected {
+    outline: 5px solid #000;
+    background-color: #fff;
+  }
+
+.CountBox {
+    background-color: red;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 100px;
+    margin: 20px 540px;
+    
+    /* fontSize: '2rem',
+    margin: '20px',
+    padding: '10px',
+    border: '2px solid black',
+    borderRadius: '5px',
+    width: '100px',
+    textAlign: 'center' */
+  }  
+
+  .CountboxLabel, .CustomInput { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .CustomInput{
+    text-align: center;
+  }
