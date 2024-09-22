@@ -35,7 +35,7 @@ const COLORS = ["pink", "green", "blue", "yellow", "purple"];
     
     if (colorArr.length == 1 && colorArr[0] == COLORS[0]){
       alert('counter not going up cause same color: ' + colorArr[colorArr.length - 1])
-    } else if (colorArr.length == 1 && colorArr[0] !== COLORS[0]){
+    } else if (colorArr.length == 1 && colorArr[0] == COLORS[0]){
         count++
 
       }else if (colorArr.length > 1 && color == colorArr[colorArr.length - 2]){
